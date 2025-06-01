@@ -1,0 +1,315 @@
+/* Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #007acc;
+}
+
+header #menu {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  background: #007acc;
+  color: #fff;
+}
+
+/* Sections */
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #007acc;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.home .content {
+  flex: 1 1 50%;
+}
+
+.home h2 {
+  font-size: 2.5rem;
+}
+
+.home .typing-text {
+  color: #007acc;
+  font-weight: bold;
+}
+
+.home .btn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #007acc;
+  color: #fff;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.home .btn:hover {
+  background: #005fa3;
+}
+
+.home .image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+/* About Section */
+.about .content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.about .tag {
+  display: inline-block;
+  background: #e0f0ff;
+  padding: 4px 12px;
+  color: #007acc;
+  border-radius: 20px;
+  margin: 10px 0;
+}
+
+.about .box-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.about .box {
+  flex: 1 1 45%;
+  margin-bottom: 10px;
+}
+
+.resumebtn .btn {
+  margin-top: 20px;
+  background: #007acc;
+  color: #fff;
+}
+
+/* Skills Section */
+.skills .bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.skills .info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.skills .info span {
+  font-weight: bold;
+}
+
+/* Projects Section */
+.projects .box-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.projects .box {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.projects .box:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.projects .btn {
+  margin-top: 10px;
+  background: #007acc;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* Education Section */
+.education .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.education .box {
+  flex: 1 1 30%;
+  background: #f0faff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.education h4 {
+  margin-top: 10px;
+  color: #007acc;
+}
+
+/* Footer */
+.footer {
+  background: #007acc;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer .box {
+  flex: 1 1 30%;
+}
+
+.footer a {
+  display: block;
+  margin-top: 8px;
+  color: #fff;
+}
+
+.footer .share a {
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+/* Scroll Top Button */
+#scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007acc;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 50%;
+  display: none;
+  z-index: 1000;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  header #menu {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #fff;
+    flex-direction: column;
+    display: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about .box-container {
+    flex-direction: column;
+  }
+
+  .education .box-container {
+    flex-direction: column;
+  }
+
+  .footer .box-container {
+    flex-direction: column;
+  }
+}
